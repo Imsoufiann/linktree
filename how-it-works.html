@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how Linktree.ma's AI technology creates stunning digital profiles in seconds. See how our AI builds your perfect link page.">
+    <meta name="keywords" content="Linktree Morocco, AI Profile, How it works, Digital presence, Link page, AI technology">
+    <meta name="author" content="Linktree.ma">
+    <title>How Our AI Works | Linktree.ma</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Mobile-first styles */
+        :root {
+            --primary: #5d3eff;
+            --primary-dark: #4a32cc;
+            --primary-light: #7b63ff;
+            --secondary: #0cc5ba;
+            --secondary-dark: #0a9e96;
+            --accent: #ff4e8d;
+            
+            --bg-dark: #0e0e2c;
+            --bg-medium: #1a1a40;
+            --bg-light: #2b2b63;
+            
+            --text-light: #f5f5ff;
+            --text-medium: #bdbddc;
+            --text-dark: #565696;
+            
+            --spacing-xs: 5px;
+            --spacing-sm: 10px;
+            --spacing-md: 20px;
+            --spacing-lg: 30px;
+            --spacing-xl: 50px;
+            
+            --border-radius: 12px;
+            --border-radius-sm: 8px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--bg-dark);
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Improved container for all device sizes */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0 0 var(--spacing-md);
+            line-height: 1.3;
+        }
+        
+        p {
+            margin: 0 0 var(--spacing-md);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(93, 62, 255, 0.3);
+        }
+        
+        .btn-light {
+            background: var(--text-light);
+            color: var(--primary);
+        }
+        
+        .btn-light:hover {
+            background: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--text-light);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hero Section */
+        .ai-hero {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-dark), var(--bg-medium));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ai-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(93, 62, 255, 0.4) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(12, 197, 186, 0.4) 0%, transparent 30%);
+            opacity: 0.4;
+            z-index: 0;
+        }
+        
+        .ai-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .ai-badge {
+            display: inline-block;
+            background: rgba(12, 197, 186, 0.2);
+            color: var(--secondary);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .ai-hero-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-light);
+        }
+        
+        .ai-highlight {
+            color: var(--primary-light);
+            position: relative;
+        }
+        
+        .ai-hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            margin-bottom: var(--spacing-lg);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* How It Works Steps */
+        .ai-steps {
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .ai-steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-xl);
+        }
+        
+        .ai-step-card {
+            background: var(--bg-medium);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--box-shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .ai-step-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .ai-step-number {
+            position: absolute;
+            top: -20px;
+            left: var(--spacing-lg);
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(93, 62, 255, 0.3);
+        }
+        
+        .ai-step-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(93, 62, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-light);
+            margin-bottom: var(--spacing-md);
+            transition: all 0.3s ease;
+        }
+        
+        .ai-step-card:hover .ai-step-icon {
+            background: var(--primary);
+            color: var(--text-light);
+            transform: rotateY(180deg);
+        }
+        
+        .ai-step-title {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .ai-step-description {
+            color: var(--text-medium);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .ai-example {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--border-radius-sm);
+            padding: var(--spacing-md);
+            position: relative;
+            margin-top: var(--spacing-md);
+        }
+        
+        .ai-example-label {
+            position: absolute;
+            top: -10px;
+            left: var(--spacing-md);
+            background: var(--secondary);
+            color: var(--text-light);
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        /* Demo Section */
+        .ai-demo {
+            padding: 60px 0;
+            background: var(--bg-medium);
+            position: relative;
+        }
+        
+        .ai-demo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .ai-input-form {
+            background: var(--bg-dark);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .ai-form-group {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .ai-form-label {
+            display: block;
+            color: var(--text-medium);
+            margin-bottom: var(--spacing-xs);
+            font-size: 0.9rem;
+        }
+        
+        .ai-form-input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-sm);
+            color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .ai-form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .ai-color-options {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-sm);
+        }
+        
+        .ai-color-option {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        /* Animation Demo Section Styles */
+.ai-animation-demo {
+    padding: 60px 0;
+    background: var(--bg-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.animation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+}
+
+/* Chat Animation */
+.chat-animation {
+    width: 100%;
+    max-width: 500px;
+    background: #0e0e22;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 15px;
+    background: #0a0a1a;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-dots {
+    display: flex;
+    gap: 5px;
+    margin-right: 15px;
+}
+
+.chat-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.chat-dot:nth-child(1) {
+    background-color: #ff5f56;
+}
+
+.chat-dot:nth-child(2) {
+    background-color: #ffbd2e;
+}
+
+.chat-dot:nth-child(3) {
+    background-color: #27c93f;
+}
+
+.chat-title {
+    font-weight: 500;
+    color: #f5f5ff;
+    font-size: 0.95rem;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-message {
+    display: flex;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.ai-message {
+    align-self: flex-start;
+    max-width: 80%;
+}
+
+.user-message {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+    max-width: 85%;
+}
+
+.message-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #5d3eff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5ff;
+    flex-shrink: 0;
+}
+
+.user-message .message-avatar {
+    background: #0cc5ba;
+}
+
+.message-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border-radius: 12px;
+    color: #f5f5ff;
+    font-size: 0.95rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.user-message .message-content {
+    text-align: left;
+}
+
+.ai-message .message-content {
+    border-bottom-left-radius: 0;
+}
+
+.user-message .message-content {
+    background: rgba(93, 62, 255, 0.2);
+    border-bottom-right-radius: 0;
+}
+
+.chat-input {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: #f5f5ff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.chat-input input:focus {
+    outline: none;
+    border-color: #5d3eff;
+}
+
+.chat-send-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #5d3eff;
+    color: #f5f5ff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-send-btn:hover {
+    background: #4a32cc;
+    transform: scale(1.05);
+}
+
+/* Phone Result */
+.phone-result {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.phone-mockup {
+    width: 260px;
+    height: 520px;
+    background: #111;
+    border-radius: 36px;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.phone-mockup.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #362617, #231811);
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 20px;
+    background: #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 10;
+}
+
+.phone-content {
+    padding: 40px 20px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.linktree-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a87249, #5e3a1f);
+    margin: 0 auto 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-avatar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M2 17h2v.5H3v1h1v.5H2v1h3v-4H2v1zm1-9h1V4H2v1h1v3zm-1 3h1.8L2 13.1v.9h3v-1H3.2L5 10.9V10H2v1zm5-6v2h14V5H7zm0 14h14v-2H7v2zm0-6h14v-2H7v2z"/></svg>');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+.profile-name {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.profile-bio {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
+}
+
+.linktree-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.profile-link {
+    height: 50px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: #fff;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+	.profile-link.active {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.profile-link:hover {
+		transform: translateY(-2px);
+		background: rgba(255, 255, 255, 0.15);
+	}
+
+	.link-1 {
+		background: linear-gradient(90deg, rgba(168, 114, 73, 0.3), rgba(94, 58, 31, 0.3));
+		transition-delay: 0.3s;
+	}
+
+	.link-2 {
+		background: linear-gradient(90deg, rgba(176, 132, 96, 0.3), rgba(115, 76, 47, 0.3));
+		transition-delay: 0.6s;
+	}
+
+	.link-3 {
+		background: linear-gradient(90deg, rgba(187, 146, 115, 0.3), rgba(135, 94, 62, 0.3));
+		transition-delay: 0.9s;
+	}
+
+	.link-4 {
+		background: linear-gradient(90deg, rgba(199, 163, 136, 0.3), rgba(156, 113, 80, 0.3));
+		transition-delay: 1.2s;
+	}
+
+	.link-icon {
+		margin-right: 12px;
+		width: 24px;
+		height: 24px;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.9rem;
+	}
+
+	.link-text {
+		font-weight: 500;
+		font-size: 0.95rem;
+	}
+
+	.linktree-footer {
+		text-align: center;
+		margin-top: 30px;
+		font-size: 0.8rem;
+		color: rgba(255, 255, 255, 0.5);
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.footer-brand {
+		font-weight: 600;
+		letter-spacing: 0.5px;
+	}
+
+	.dot {
+		color: #0cc5ba;
+	}
+
+	/* AI Processing Animation */
+	.ai-processing {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+		background: rgba(14, 14, 44, 0.8);
+		padding: 30px;
+		border-radius: 12px;
+		opacity: 1;
+		transition: opacity 0.5s ease;
+	}
+
+	.ai-processing.inactive {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.ai-loader {
+		display: flex;
+		gap: 8px;
+	}
+
+	.loader-dot {
+		width: 12px;
+		height: 12px;
+		background: #5d3eff;
+		border-radius: 50%;
+		animation: loaderPulse 1.5s infinite ease-in-out;
+	}
+
+	.loader-dot:nth-child(2) {
+		animation-delay: 0.2s;
+		background: #0cc5ba;
+	}
+
+	.loader-dot:nth-child(3) {
+		animation-delay: 0.4s;
+		background: #a87249;
+	}
+
+	.processing-text {
+		color: #f5f5ff;
+		font-size: 1rem;
+	}
+
+	@keyframes loaderPulse {
+		0%, 100% {
+			transform: scale(0.8);
+			opacity: 0.5;
+		}
+		50% {
+			transform: scale(1.2);
+			opacity: 1;
+		}
+	}
+
+	/* Typing Animation */
+	.typing-message {
+		opacity: 0;
+	}
+
+	.typing-message.active {
+		opacity: 1;
+	}
+
+	.typing-text {
+		position: relative;
+		white-space: normal;
+		overflow: hidden;
+		margin: 0;
+		width: 0;
+	}
+
+	.typing-content {
+		max-width: 100%;
+	}
+
+	.typing-text.typing {
+		animation: typing 4s forwards;
+		width: auto;
+	}
+
+	@keyframes typing {
+		from {
+			width: 0;
+		}
+		to {
+			width: 100%;
+		}
+	}
+
+	.response-message {
+		opacity: 0;
+	}
+
+	.response-message.active {
+		opacity: 1;
+	}
+
+	/* Media Queries */
+	@media (min-width: 768px) {
+		.animation-container {
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.chat-animation {
+			height: 450px;
+		}
+		
+		.user-message {
+			max-width: 75%;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.chat-animation {
+			margin-bottom: 50px;
+		}
+		
+		.phone-result {
+			margin-top: 20px;
+		}
+	}
+        .ai-color-option:hover {
+            transform: scale(1.1);
+        }
+        
+        .ai-color-purple {
+            background: linear-gradient(135deg, #5d3eff, #4a32cc);
+        }
+        
+        .ai-color-teal {
+            background: linear-gradient(135deg, #0cc5ba, #0a9e96);
+        }
+        
+        .ai-color-pink {
+            background: linear-gradient(135deg, #ff4e8d, #d03e72);
+        }
+        
+        .ai-color-yellow {
+            background: linear-gradient(135deg, #ffbb00, #ff9e00);
+        }
+        
+        .ai-generate-btn {
+            width: 100%;
+            margin-top: var(--spacing-md);
+        }
+        
+        .ai-result-preview {
+            background: var(--bg-dark);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+        }
+        
+        .ai-result-label {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary);
+            color: var(--text-light);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .ai-phone-mockup {
+            width: 240px;
+            height: 480px;
+            background: #111;
+            border-radius: 30px;
+            padding: 10px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .ai-phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--bg-dark), #16162e);
+            border-radius: 22px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .ai-phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 20px;
+            background: #000;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            z-index: 10;
+        }
+        
+        .ai-phone-content {
+            padding: 30px 15px 15px;
+            text-align: center;
+        }
+        
+        .ai-profile-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+        
+        .ai-profile-name {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .ai-profile-bio {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            margin-bottom: 20px;
+        }
+        
+        .ai-profile-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .ai-profile-link {
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+        }
+        
+        .ai-profile-link:nth-child(1) {
+            background: linear-gradient(90deg, rgba(93, 62, 255, 0.3), rgba(93, 62, 255, 0.1));
+        }
+        
+        .ai-profile-link:nth-child(2) {
+            background: linear-gradient(90deg, rgba(12, 197, 186, 0.3), rgba(12, 197, 186, 0.1));
+        }
+        
+        .ai-profile-link:nth-child(3) {
+            background: linear-gradient(90deg, rgba(255, 78, 141, 0.3), rgba(255, 78, 141, 0.1));
+        }
+        
+        .ai-link-icon {
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            margin-right: 10px;
+        }
+        
+        .ai-link-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Tech Features Section */
+        .ai-features {
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .ai-features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+        }
+        
+        .ai-feature-card {
+            background: var(--bg-medium);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--box-shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .ai-feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .ai-feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(93, 62, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-light);
+            margin-bottom: var(--spacing-md);
+            transition: all 0.3s ease;
+        }
+        
+        .ai-feature-card:hover .ai-feature-icon {
+            background: var(--primary);
+            color: var(--text-light);
+            transform: rotateY(180deg);
+        }
+        
+        .ai-feature-title {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .ai-feature-description {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+        
+        .ai-feature-stat {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px 15px;
+            border-radius: var(--border-radius-sm);
+            margin-top: var(--spacing-md);
+        }
+        
+        .ai-stat-label {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+        
+        .ai-stat-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        /* FAQ Section */
+        .ai-faq {
+            padding: 60px 0;
+            background: var(--bg-medium);
+        }
+        
+        .ai-faq-list {
+            margin-top: var(--spacing-xl);
+        }
+        
+        .ai-faq-item {
+            margin-bottom: var(--spacing-md);
+            background: var(--bg-dark);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .ai-faq-question {
+            padding: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .ai-faq-question h3 {
+            font-size: 1.1rem;
+            margin: 0;
+            padding-right: var(--spacing-md);
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .ai-faq-toggle {
+            width: 24px;
+            height: 24px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+        
+        .ai-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .ai-faq-content {
+            padding: 0 var(--spacing-md) var(--spacing-md);
+            color: var(--text-medium);
+        }
+        
+        .ai-faq-item.active .ai-faq-question {
+            background: rgba(93, 62, 255, 0.1);
+        }
+        
+        .ai-faq-item.active .ai-faq-toggle {
+            transform: rotate(45deg);
+            background: var(--secondary);
+        }
+        
+        .ai-faq-item.active .ai-faq-answer {
+            max-height: 500px;
+        }
+        
+        /* CTA Section */
+        .ai-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            text-align: center;
+            position: relative;
+        }
+        
+        .ai-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80"><path d="M0 0h80v80H0z" fill="none"/><path d="M0 80V0h80" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>');
+            opacity: 0.1;
+        }
+        
+        .ai-cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .ai-cta-title {
+            font-size: 2.2rem;
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .ai-cta-text {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--spacing-lg);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .ai-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        /* More responsive styles */
+        @media (min-width: 768px) {
+            .ai-steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .ai-features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .ai-demo-container {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: var(--spacing-xl);
+            }
+            
+            .ai-input-form,
+            .ai-result-preview {
+                flex: 1;
+                margin-bottom: 0;
+            }
+            
+            .ai-cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+                max-width: none;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .ai-features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .ai-hero-title {
+                font-size: 3rem;
+            }
+            
+            .ai-step-card {
+                padding: var(--spacing-xl);
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Loading Animation for AI Generation */
+        .ai-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(14, 14, 44, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            border-radius: var(--border-radius);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .ai-loading.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .ai-loading-text {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+        
+        .ai-loading-dots {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .ai-loading-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: dotPulse 1.5s infinite ease-in-out;
+        }
+        
+        .ai-loading-dot:nth-child(2) {
+            animation-delay: 0.2s;
+            background: var(--secondary);
+        }
+        
+        .ai-loading-dot:nth-child(3) {
+            animation-delay: 0.4s;
+            background: var(--accent);
+        }
+        
+        @keyframes dotPulse {
+            0%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <div class="gradient-circle circle-1"></div>
+        <div class="gradient-circle circle-2"></div>
+        <div class="gradient-circle circle-3"></div>
+        <div class="background-grid"></div>
+        <div class="moving-dots"></div>
+    </div>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Linktree<span class="logo-dot">.</span>ma</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                <a href="index.html#pricing" class="nav-link">Pricing</a>
+                <a href="index.html#nfc-cards" class="nav-link">NFC Cards</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html#about" class="mobile-link">About</a>
+        <a href="index.html#services" class="mobile-link">Services</a>
+        <a href="index.html#portfolio" class="mobile-link">Portfolio</a>
+        <a href="index.html#pricing" class="mobile-link">Pricing</a>
+        <a href="index.html#nfc-cards" class="mobile-link">NFC Cards</a>
+        <a href="index.html#contact" class="mobile-link">Contact</a>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="ai-hero">
+        <div class="container">
+            <div class="ai-hero-content">
+                <span class="ai-badge"><i class="fas fa-robot"></i> AI-Powered</span>
+                <h1 class="ai-hero-title">Experience the <span class="ai-highlight">Magic of AI</span> Working For You</h1>
+                <p class="ai-hero-subtitle">Our artificial intelligence creates stunning, high-performing link pages in seconds - customized perfectly for your brand.</p>
+                <a href="#ai-demo" class="btn">See How It Works</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works Steps -->
+    <section class="ai-steps" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Our <span class="ai-highlight">AI</span> Works</h2>
+                <p class="section-subtitle">From simple inputs to stunning results - see the 5-step process behind our AI-powered link pages</p>
+            </div>
+            
+            <div class="ai-steps-grid">
+                <div class="ai-step-card fade-in">
+                    <div class="ai-step-number">1</div>
+                    <div class="ai-step-icon">
+                        <i class="fas fa-user-edit"></i>
+                    </div>
+                    <h3 class="ai-step-title">Share Your Brand Info</h3>
+                    <p class="ai-step-description">Tell our AI about your brand, industry, and style preferences. The more you share, the better the AI understands your unique identity.</p>
+					<div class="ai-example">
+                        <span class="ai-example-label">Input Example</span>
+                        <p>Brand: Urban Coffee Co.</p>
+                        <p>Industry: Coffee Shop</p>
+                        <p>Style Preference: Modern, Earthy</p>
+                        <p>Color Scheme: Coffee browns & soft greens</p>
+                    </div>
+                </div>
+                
+                <div class="ai-step-card fade-in">
+                    <div class="ai-step-number">2</div>
+                    <div class="ai-step-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="ai-step-title">AI Analysis</h3>
+                    <p class="ai-step-description">Our advanced AI analyzes your information and compares it with thousands of successful profiles in your industry to identify what works best.</p>
+                    <div class="ai-example">
+                        <span class="ai-example-label">AI Processing</span>
+                        <p><i class="fas fa-check"></i> Analyzing brand identity markers</p>
+                        <p><i class="fas fa-check"></i> Matching with industry best practices</p>
+                        <p><i class="fas fa-check"></i> Testing multiple design combinations</p>
+                        <p><i class="fas fa-check"></i> Generating optimal content flow</p>
+                    </div>
+                </div>
+                
+                <div class="ai-step-card fade-in">
+                    <div class="ai-step-number">3</div>
+                    <div class="ai-step-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="ai-step-title">Design Creation</h3>
+                    <p class="ai-step-description">The AI creates a custom design that perfectly matches your brand identity, with colors, typography, and layouts optimized for maximum impact.</p>
+                    <div class="ai-example">
+                        <span class="ai-example-label">Design Elements</span>
+                        <p><i class="fas fa-palette"></i> Custom color palette generation</p>
+                        <p><i class="fas fa-font"></i> Typography selection</p>
+                        <p><i class="fas fa-th-large"></i> Layout optimization</p>
+                        <p><i class="fas fa-mobile-alt"></i> Responsive design adaptation</p>
+                    </div>
+                </div>
+                
+                <div class="ai-step-card fade-in">
+                    <div class="ai-step-number">4</div>
+                    <div class="ai-step-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="ai-step-title">Content Organization</h3>
+                    <p class="ai-step-description">Your links and content are strategically arranged in the optimal order to maximize engagement and conversions based on AI predictions.</p>
+                    <div class="ai-example">
+                        <span class="ai-example-label">Content Strategy</span>
+                        <p><i class="fas fa-sort-amount-down"></i> Priority-based content hierarchy</p>
+                        <p><i class="fas fa-crosshairs"></i> Strategic CTA placement</p>
+                        <p><i class="fas fa-eye"></i> Attention flow optimization</p>
+                        <p><i class="fas fa-chart-line"></i> Conversion prediction models</p>
+                    </div>
+                </div>
+                
+                <div class="ai-step-card fade-in">
+                    <div class="ai-step-number">5</div>
+                    <div class="ai-step-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="ai-step-title">Continuous Improvement</h3>
+                    <p class="ai-step-description">After launch, our AI keeps learning from visitor behavior to suggest data-driven optimizations that improve your results over time.</p>
+                    <div class="ai-example">
+                        <span class="ai-example-label">Performance Data</span>
+                        <p><i class="fas fa-chart-pie"></i> User behavior analysis</p>
+                        <p><i class="fas fa-clock"></i> Time-on-page optimization</p>
+                        <p><i class="fas fa-mouse-pointer"></i> Click-through rate tracking</p>
+                        <p><i class="fas fa-lightbulb"></i> Automated improvement suggestions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+	<!-- Animation Demo Section Replacement -->
+	<section class="ai-animation-demo" id="ai-demo">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="section-title">See the <span class="ai-highlight">Magic</span> Happen</h2>
+				<p class="section-subtitle">Watch how our AI transforms your ideas into a beautiful Linktree in seconds</p>
+			</div>
+			
+			<div class="animation-container">
+				<div class="chat-animation">
+					<div class="chat-header">
+						<div class="chat-dots">
+							<span class="chat-dot"></span>
+							<span class="chat-dot"></span>
+							<span class="chat-dot"></span>
+						</div>
+						<div class="chat-title">Tell Our AI What You Want</div>
+					</div>
+					<div class="chat-messages">
+						<div class="chat-message ai-message">
+							<div class="message-avatar">
+								<i class="fas fa-robot"></i>
+							</div>
+							<div class="message-content">
+								<p>Hi there! I'm the Linktree.ma AI. Tell me about the Linktree you want to create.</p>
+							</div>
+						</div>
+						<div class="chat-message user-message typing-message">
+							<div class="message-avatar">
+								<i class="fas fa-user"></i>
+							</div>
+							<div class="message-content typing-content">
+								<p class="typing-text">I want a coffee shop linktree with warm brown colors, showing our menu, location, and instagram. The name is "Urban Coffee Co." and we're a cozy spot in downtown Fez.</p>
+							</div>
+						</div>
+						<div class="chat-message ai-message response-message">
+							<div class="message-avatar">
+								<i class="fas fa-robot"></i>
+							</div>
+							<div class="message-content">
+								<p>Got it! Creating your perfect coffee shop Linktree now with warm brown tones, essential links, and a cozy vibe. Here's your AI-generated profile...</p>
+							</div>
+						</div>
+					</div>
+					<div class="chat-input">
+						<input type="text" placeholder="Type your message..." disabled>
+						<button class="chat-send-btn">
+							<i class="fas fa-paper-plane"></i>
+						</button>
+					</div>
+				</div>
+				
+				<div class="phone-result">
+					<div class="phone-mockup">
+						<div class="phone-screen">
+							<div class="phone-notch"></div>
+							<div class="phone-content">
+								<div class="linktree-header">
+									<div class="profile-avatar"></div>
+									<h3 class="profile-name">Urban Coffee Co.</h3>
+									<p class="profile-bio">Artisanal coffee & cozy vibes in downtown Fez</p>
+								</div>
+								
+								<div class="linktree-links">
+									<div class="profile-link link-1">
+										<span class="link-icon"><i class="fas fa-utensils"></i></span>
+										<span class="link-text">Our Menu</span>
+									</div>
+									<div class="profile-link link-2">
+										<span class="link-icon"><i class="fas fa-map-marker-alt"></i></span>
+										<span class="link-text">Find Us</span>
+									</div>
+									<div class="profile-link link-3">
+										<span class="link-icon"><i class="fab fa-instagram"></i></span>
+										<span class="link-text">Instagram</span>
+									</div>
+									<div class="profile-link link-4">
+										<span class="link-icon"><i class="fas fa-phone"></i></span>
+										<span class="link-text">Contact Us</span>
+									</div>
+								</div>
+								
+								<div class="linktree-footer">
+									<span>powered by</span>
+									<span class="footer-brand">Linktree<span class="dot">.</span>ma</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="ai-processing">
+						<div class="ai-loader">
+							<div class="loader-dot"></div>
+							<div class="loader-dot"></div>
+							<div class="loader-dot"></div>
+						</div>
+						<div class="processing-text">AI creating your profile...</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    
+    <!-- AI Features Section -->
+    <section class="ai-features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful <span class="ai-highlight">AI Technologies</span> Inside</h2>
+                <p class="section-subtitle">Our link pages are powered by these cutting-edge AI systems working together</p>
+            </div>
+            
+            <div class="ai-features-grid">
+                <div class="ai-feature-card fade-in">
+                    <div class="ai-feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="ai-feature-title">Neural Networks</h3>
+                    <p class="ai-feature-description">Our AI has analyzed millions of successful profiles to understand what design elements and content structures drive the highest engagement rates.</p>
+                    <div class="ai-feature-stat">
+                        <span class="ai-stat-label">Accuracy Rate</span>
+                        <span class="ai-stat-value">97.8%</span>
+                    </div>
+                </div>
+                
+                <div class="ai-feature-card fade-in">
+                    <div class="ai-feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="ai-feature-title">Design Intelligence</h3>
+                    <p class="ai-feature-description">Advanced algorithms that understand color theory, typography, and layout principles to create visually appealing profiles that resonate with your audience.</p>
+                    <div class="ai-feature-stat">
+                        <span class="ai-stat-label">Design Variations</span>
+                        <span class="ai-stat-value">1,200+</span>
+                    </div>
+                </div>
+                
+                <div class="ai-feature-card fade-in">
+                    <div class="ai-feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="ai-feature-title">Predictive Analytics</h3>
+                    <p class="ai-feature-description">Leverages user behavior data to predict which content arrangements and call-to-action placements will generate the highest conversion rates.</p>
+                    <div class="ai-feature-stat">
+                        <span class="ai-stat-label">Conversion Lift</span>
+                        <span class="ai-stat-value">+37%</span>
+                    </div>
+                </div>
+                
+                <div class="ai-feature-card fade-in">
+                    <div class="ai-feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="ai-feature-title">Device Optimization</h3>
+                    <p class="ai-feature-description">Intelligent rendering that automatically optimizes your page for every device and screen size, ensuring a perfect experience everywhere.</p>
+                    <div class="ai-feature-stat">
+                        <span class="ai-stat-label">Devices Tested</span>
+                        <span class="ai-stat-value">350+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="ai-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked <span class="ai-highlight">Questions</span></h2>
+                <p class="section-subtitle">Get answers to common questions about our AI-powered digital profile creation</p>
+            </div>
+            
+            <div class="ai-faq-list">
+                <div class="ai-faq-item">
+                    <div class="ai-faq-question">
+                        <h3>How accurate is the AI in capturing my brand identity?</h3>
+                        <div class="ai-faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="ai-faq-answer">
+                        <div class="ai-faq-content">
+                            <p>Our AI achieves over 97% accuracy in reflecting brand identities after initial input. The system analyzes your existing online presence, color preferences, industry standards, and target audience to create designs that authentically represent your brand.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-faq-item">
+                    <div class="ai-faq-question">
+                        <h3>Do I need technical skills to use the AI tool?</h3>
+                        <div class="ai-faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="ai-faq-answer">
+                        <div class="ai-faq-content">
+                            <p>Not at all! Our AI-powered system is designed to be user-friendly for everyone, regardless of technical expertise. The intuitive interface guides you through the process with simple questions about your brand and preferences. All the technical aspects happen behind the scenes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-faq-item">
+                    <div class="ai-faq-question">
+                        <h3>How does the AI optimize my content arrangement?</h3>
+                        <div class="ai-faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="ai-faq-answer">
+                        <div class="ai-faq-content">
+                            <p>The AI analyzes millions of data points from successful digital profiles in your industry to determine optimal content hierarchy. It considers factors like visitor attention patterns, click-through rates, and conversion optimization. After launch, it continually refines the arrangement based on your specific visitor behavior.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-faq-item">
+                    <div class="ai-faq-question">
+                        <h3>Can I make changes after the AI generates my profile?</h3>
+                        <div class="ai-faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="ai-faq-answer">
+                        <div class="ai-faq-content">
+                            <p>Absolutely! While the AI provides an excellent starting point, you maintain complete creative control. Our editor allows you to modify any aspect of your profile with real-time AI suggestions. The system actually learns from your preferences, improving future recommendations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-faq-item">
+                    <div class="ai-faq-question">
+                        <h3>What kind of analytics does the AI provide?</h3>
+                        <div class="ai-faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="ai-faq-answer">
+                        <div class="ai-faq-content">
+                            <p>Our AI analytics go beyond basic visitor counts. You'll receive insights on visitor flow patterns, engagement rates per link, conversion analytics, optimal visiting times, audience demographics, and predictive trends. The AI translates complex data into actionable recommendations specifically for your profile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="ai-cta">
+        <div class="container">
+            <div class="ai-cta-content">
+                <h2 class="ai-cta-title">Ready to Experience AI-Powered Excellence?</h2>
+                <p class="ai-cta-text">Join our waitlist today and be among the first to create your perfect digital profile with our revolutionary AI technology.</p>
+                <div class="ai-cta-buttons">
+                    <a href="linktree.ma/ai-waitlist" class="btn btn-light">Join the Waitlist</a>
+                    <a href="index.html" class="btn btn-outline">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo-column">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">Linktree<span class="logo-dot">.</span>ma</span>
+                    </a>
+                    <p>Professional custom link pages for brands and creators.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#nfc-cards">NFC Cards</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Linktree.ma. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    
+    <!-- AI Demo Interaction Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // AI Demo interaction
+            const generateBtn = document.getElementById('generate-btn');
+            const loadingIndicator = document.getElementById('ai-loading');
+            
+            if (generateBtn && loadingIndicator) {
+                generateBtn.addEventListener('click', function() {
+                    // Show loading animation
+                    loadingIndicator.classList.add('active');
+                    
+                    // Simulate AI processing (3 seconds)
+                    setTimeout(function() {
+                        // Hide loading animation
+                        loadingIndicator.classList.remove('active');
+                    }, 3000);
+                });
+            }
+            
+            // FAQ toggle functionality
+            const faqItems = document.querySelectorAll('.ai-faq-item');
+            
+            faqItems.forEach(function(item) {
+                const question = item.querySelector('.ai-faq-question');
+                const answer = item.querySelector('.ai-faq-answer');
+                
+                question.addEventListener('click', function() {
+                    // Close all other items
+                    faqItems.forEach(function(otherItem) {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.ai-faq-answer').style.maxHeight = null;
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = null;
+                    }
+                });
+            });
+            
+            // Fade-in animation
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const checkFade = function() {
+                fadeElements.forEach(function(element) {
+                    const position = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (position < screenPosition) {
+                        element.classList.add('active');
+                    }
+                });
+            };
+            
+            // Check initially and on scroll
+            checkFade();
+            window.addEventListener('scroll', checkFade);
+            
+            // Color picker functionality
+            const colorOptions = document.querySelectorAll('.ai-color-option');
+            
+            colorOptions.forEach(function(option) {
+                option.addEventListener('click', function() {
+                    // Remove active class from all options
+                    colorOptions.forEach(function(opt) {
+                        opt.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked option
+                    this.classList.add('active');
+                });
+            });
+        });
+		
+		// Animation sequence script
+	document.addEventListener('DOMContentLoaded', function() {
+		// Elements
+		const typingMessage = document.querySelector('.typing-message');
+		const typingText = document.querySelector('.typing-text');
+		const responseMessage = document.querySelector('.response-message');
+		const phoneMockup = document.querySelector('.phone-mockup');
+		const aiProcessing = document.querySelector('.ai-processing');
+		const profileLinks = document.querySelectorAll('.profile-link');
+		
+		// Start animation sequence
+		setTimeout(startAnimationSequence, 1000);
+		
+		function startAnimationSequence() {
+			// Step 1: Show typing message
+			typingMessage.classList.add('active');
+			
+			// Step 2: Start typing animation
+			setTimeout(() => {
+				typingText.classList.add('typing');
+			}, 500);
+			
+			// Step 3: Show AI response
+			setTimeout(() => {
+				responseMessage.classList.add('active');
+			}, 5000);
+			
+			// Step 4: Start AI processing
+			setTimeout(() => {
+				aiProcessing.classList.add('active');
+			}, 6000);
+			
+			// Step 5: Show phone result
+			setTimeout(() => {
+				aiProcessing.classList.add('inactive');
+				phoneMockup.classList.add('active');
+				
+				// Step 6: Animate links appearing
+				setTimeout(() => {
+					profileLinks.forEach(link => {
+						link.classList.add('active');
+					});
+				}, 500);
+			}, 9000);
+		}
+	});
+    </script>
+</body>
+</html>
